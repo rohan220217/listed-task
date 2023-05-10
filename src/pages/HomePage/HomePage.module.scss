@@ -1,0 +1,41 @@
+@import "../../assets/sass/main.scss";
+
+.container {
+  display: flex;
+  gap: 6rem;
+  padding: 4rem;
+
+  @media only screen and (max-width: $bp-small) {
+    flex-direction: column-reverse;
+  }
+
+  .mainContent {
+    width: calc(100vw - 44rem);
+    @media only screen and (max-width: $bp-small) {
+      width: 100%;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      gap: 3.7rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+      }
+    }
+
+    .bottomCards {
+      display: flex;
+      gap: 3.7rem;
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+      }
+    }
+  }
+}
