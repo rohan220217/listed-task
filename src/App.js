@@ -3,12 +3,10 @@ import {
   Routes,
   Route,
   Navigate,
-  useNavigate,
 } from "react-router-dom";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import HomePage from "./pages/HomePage/HomePage";
 import { Toaster } from "react-hot-toast";
-import { useEffect } from "react";
 import { createPortal } from "react-dom";
 
 function App() {
